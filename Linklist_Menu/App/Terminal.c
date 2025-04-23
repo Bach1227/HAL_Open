@@ -2,6 +2,8 @@
 
 char Current_Cmd[100];
 Terminal_LinkedNode Terminal_TestRootNode = {"Root Terminal", NULL, NULL, NULL, NULL, NULL};
+Terminal_LinkedNode* Terminal_PriorNodeArray[10];
+Terminal_LinkedNode* Terminal_NextNodeArray[10];
 Terminal_Fuction FunctionList[10];
 
 void Command_Input(uint8_t Cmd)
@@ -31,6 +33,19 @@ void Command_Input(uint8_t Cmd)
     default:
         break;
     }
+}
+
+void TerminalNode_Switch(uint8_t ChangeFlag)
+{
+    if (ChangeFlag / 16)            //1:Prior  2:Next
+    {
+        Terminal_LinkedList_UpDown_Traverse(Terminal_PriorNodeArray[(ChangeFlag % 16)]);
+    }
+    else
+    {
+        Terminal_LinkedList_UpDown_Traverse(Terminal_NextNodeArray[(ChangeFlag % 16)]);
+    }
+    
 }
 
 Terminal_LinkedNode* Terminal_LinkedList_InsertToNext(Terminal_LinkedNode* PriorLinkedList, 
@@ -96,8 +111,11 @@ void Terminal_LinkedList_UpDown_Traverse(Terminal_LinkedNode* Start_LinkedList)
         printf("%s\n", Current_Terminal_LinkedNode->Infomation);
         if (i < 9)
         {
-            FunctionList[i++] = Current_Terminal_LinkedNode->Fuction;
+            Terminal_PriorNodeArray[i] = Current_Terminal_LinkedNode->Prior_LinkedNode;
+            Terminal_NextNodeArray[i] = Current_Terminal_LinkedNode->Next_LinkedNode;
+            FunctionList[i] = Current_Terminal_LinkedNode->Fuction;
             Current_Terminal_LinkedNode = Current_Terminal_LinkedNode->Down_LinkedNode;
+            i++;
         }
     }
     FunctionList[i++] = Current_Terminal_LinkedNode->Fuction;
