@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"linklist_menu\startup_stm32f103xe.o"
+"linklist_menu\main.o"
+"linklist_menu\gpio.o"
+"linklist_menu\usart.o"
+"linklist_menu\stm32f1xx_it.o"
+"linklist_menu\stm32f1xx_hal_msp.o"
+"linklist_menu\stm32f1xx_hal_gpio_ex.o"
+"linklist_menu\stm32f1xx_hal_tim.o"
+"linklist_menu\stm32f1xx_hal_tim_ex.o"
+"linklist_menu\stm32f1xx_hal_uart.o"
+"linklist_menu\stm32f1xx_hal.o"
+"linklist_menu\stm32f1xx_hal_rcc.o"
+"linklist_menu\stm32f1xx_hal_rcc_ex.o"
+"linklist_menu\stm32f1xx_hal_gpio.o"
+"linklist_menu\stm32f1xx_hal_dma.o"
+"linklist_menu\stm32f1xx_hal_cortex.o"
+"linklist_menu\stm32f1xx_hal_pwr.o"
+"linklist_menu\stm32f1xx_hal_flash.o"
+"linklist_menu\stm32f1xx_hal_flash_ex.o"
+"linklist_menu\stm32f1xx_hal_exti.o"
+"linklist_menu\system_stm32f1xx.o"
+"linklist_menu\terminal.o"
+--library_type=microlib --strict --scatter "Linklist_Menu\Linklist_Menu.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Linklist_Menu.map" -o Linklist_Menu\Linklist_Menu.axf
