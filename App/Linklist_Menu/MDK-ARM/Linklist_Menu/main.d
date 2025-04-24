@@ -32,3 +32,5 @@ linklist_menu\main.o: H:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 linklist_menu\main.o: ../App/Terminal.h
 linklist_menu\main.o: H:\keil\ARM\ARMCC\Bin\..\include\string.h
 linklist_menu\main.o: H:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+linklist_menu\main.o: ../App/PID.h
+linklist_menu\main.o: H:\keil\ARM\ARMCC\Bin\..\include\math.h

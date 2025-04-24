@@ -21,6 +21,7 @@
 "linklist_menu\stm32f1xx_hal_exti.o"
 "linklist_menu\system_stm32f1xx.o"
 "linklist_menu\terminal.o"
+"linklist_menu\pid.o"
 --library_type=microlib --strict --scatter "Linklist_Menu\Linklist_Menu.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

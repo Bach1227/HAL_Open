@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
 #include "Terminal.h"
+#include "PID.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,7 @@
 
 /* USER CODE BEGIN PV */
 uint8_t T = 0;
+PID_Param_int32 TestPID;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

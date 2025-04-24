@@ -3,14 +3,14 @@
         {
             "name": "Linklist_Menu",
             "includePath": [
-                "h:\\desktop\\Code\\HAL_Open\\Linklist_Menu\\Core\\Inc",
+                "h:\\desktop\\Code\\HAL_Open\\App\\Linklist_Menu\\Core\\Inc",
                 "H:\\Stm32Repotistory\\STM32Cube_FW_F1_V1.8.5\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
                 "H:\\Stm32Repotistory\\STM32Cube_FW_F1_V1.8.5\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
                 "H:\\Stm32Repotistory\\STM32Cube_FW_F1_V1.8.5\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
                 "H:\\Stm32Repotistory\\STM32Cube_FW_F1_V1.8.5\\Drivers\\CMSIS\\Include",
-                "h:\\desktop\\Code\\HAL_Open\\Linklist_Menu\\App",
-                "h:\\desktop\\Code\\HAL_Open\\Linklist_Menu\\MDK-ARM",
-                "h:\\desktop\\Code\\HAL_Open\\Linklist_Menu\\Core\\Src",
+                "h:\\desktop\\Code\\HAL_Open\\App\\Linklist_Menu\\App",
+                "h:\\desktop\\Code\\HAL_Open\\App\\Linklist_Menu\\MDK-ARM",
+                "h:\\desktop\\Code\\HAL_Open\\App\\Linklist_Menu\\Core\\Src",
                 "H:\\Stm32Repotistory\\STM32Cube_FW_F1_V1.8.5\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [

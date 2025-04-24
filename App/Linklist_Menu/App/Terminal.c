@@ -106,6 +106,12 @@ void Terminal_LinkedList_UpDown_Traverse(Terminal_LinkedNode* Start_LinkedList)
 {
     Terminal_LinkedNode* Current_Terminal_LinkedNode = Start_LinkedList;
     uint8_t i = 0;
+
+    while (Current_Terminal_LinkedNode->Up_LinkedNode != NULL)
+    {
+        Current_Terminal_LinkedNode = Current_Terminal_LinkedNode->Up_LinkedNode;
+    }//straight up utill there is not upper node
+    
     while (Current_Terminal_LinkedNode->Down_LinkedNode != NULL)
     {
         printf("%s\n", Current_Terminal_LinkedNode->Infomation);
@@ -117,7 +123,7 @@ void Terminal_LinkedList_UpDown_Traverse(Terminal_LinkedNode* Start_LinkedList)
             Current_Terminal_LinkedNode = Current_Terminal_LinkedNode->Down_LinkedNode;
             i++;
         }
-    }
+    }//straight down utill there is not upper node
     FunctionList[i++] = Current_Terminal_LinkedNode->Fuction;
     printf("%s\n", Current_Terminal_LinkedNode->Infomation);
     // Current_Terminal_LinkedNode = Current_Terminal_LinkedNode->Next_LinkedNode;
