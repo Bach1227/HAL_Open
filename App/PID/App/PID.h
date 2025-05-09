@@ -1,7 +1,17 @@
 #ifndef __PID_H
 #define __PID_H
 
+#define STM32F4
+
+#ifdef STM32F4
+#include "stm32f4xx_hal.h"
+#endif // DEBUG
+
+#ifdef STM32F1
 #include "stm32f1xx_hal.h"
+#endif // DEBUG
+
+
 #include "math.h"
 
 typedef struct

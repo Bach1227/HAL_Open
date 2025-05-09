@@ -64,18 +64,18 @@ float PID_Update_float(PID_Param_float* PID_Param, float ValueNow)
     PID_Param->ValueNow = ValueNow;
     PID_Param->ErrorNow = PID_Param->Target - PID_Param->ValueNow;
 
-    if (fasb(PID_Param->ErrorNow) <= PID_Param->IntegralRange)
+    if (fabs(PID_Param->ErrorNow) <= PID_Param->IntegralRange)
     {
         PID_Param->ErrorSum += PID_Param->ErrorNow;
     }
 
-    if (fasb(PID_Param->ErrorSum) <= PID_Param->IntegralLimit)
+    if (fabs(PID_Param->ErrorSum) <= PID_Param->IntegralLimit)
     {
         PID_Param->ErrorSum = PID_Param->IntegralLimit;
     }
     
 
-    PID_Param->Output = PID_Param->Kp * PID_Param->ValueNow
+    PID_Param->Output = PID_Param->Kp * PID_Param->ErrorNow
                       + PID_Param->Ki * PID_Param->ErrorSum
                       + PID_Param->Kd * (PID_Param->ValueNow - PID_Param->ValueLast);
 
