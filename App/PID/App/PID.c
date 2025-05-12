@@ -52,7 +52,7 @@ int32_t PID_Update_int32(PID_Param_int32* PID_Param, int32_t ValueNow)
     }
     
 
-    PID_Param->Output = PID_Param->Kp * PID_Param->ValueNow
+    PID_Param->Output = PID_Param->Kp * PID_Param->ErrorNow
                       + PID_Param->Ki * PID_Param->ErrorSum
                       + PID_Param->Kd * (PID_Param->ValueNow - PID_Param->ValueLast);
                       
